@@ -1,0 +1,170 @@
+
+#define sensor A0
+
+#define led 13
+
+#define buz 9
+
+
+void setup() 
+{
+  
+  
+  pinMode(sensor, INPUT);
+
+  pinMode(buz, OUTPUT);
+
+  pinMode(led, OUTPUT);
+
+  Serial.begin(9600);
+
+}
+
+void loop() 
+{
+  float adcValue=0;
+
+  for(int i=0;i<10;i++)
+
+  {
+    adcValue+= analogRead(sensor);
+
+    delay(10);
+  }
+
+    float v= (adcValue/10) * (5.0/1024.0);
+
+    float mgL= 0.67 * v;
+
+    Serial.print("BAC:");
+
+    Serial.print(mgL);
+
+    Serial.print(" mg/L");
+
+      if(mgL > 1.9)
+          { 
+   
+              Serial.println("    Alcohol vapor detection");
+                digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+            
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+          
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+                
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH); 
+              
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+                
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+                
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+              delay(10000);
+              digitalWrite(buz, LOW);
+                delay(10000);
+              digitalWrite(buz, HIGH);
+      
+          }
+   
+}
+    
